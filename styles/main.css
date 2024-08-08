@@ -1,0 +1,24 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+/* footer */
+.footer__bar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 4%;
+  background-color: rgba(238, 47, 200, 0.665);
+}
+.footer__bar-text {
+  padding-left: 0.5rem;
+}
+.footer__bar-copyright {
+  padding-right: 0.5rem;
+}/*# sourceMappingURL=main.css.map */
