@@ -3,10 +3,46 @@ body {
     padding: 0;
 }
 
+/* header */
+.header {
+    
+    &__nav {
+        display: flex;
+        justify-content: flex-end;
+        padding-right: 0.5rem;
+        gap: 1rem;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        font-size: 14px;
 
+        &-text-wrapper {
+            align-self: center;
+        }
 
+        &-list {
+            display: flex;
+            justify-content: flex-start;
+            gap: 1rem;
+            list-style: none;
+            padding-left: 0;
+        }
 
+        &-item {
+            padding-right: 1rem;
+            border-right: 2px solid #666;
+        }
 
+        &-link {
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            text-decoration: none;
+            color: #ee2fc8;
+
+            &:hover {
+                color: #CCC;
+                transition: 0.3s ease-in-out;
+            }
+        }
+    }
+}
 
 /* footer */
 .footer {
