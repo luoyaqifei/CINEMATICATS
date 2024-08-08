@@ -12,13 +12,26 @@ document.addEventListener("DOMContentLoaded", async (e) => {
     document
         .getElementById("generate-btn")
         .addEventListener("click", async (e) => {
-            const catImageEl = document.getElementById("cat-image");
-            await replaceRandomCat(catImageEl);
-            const movieCardEl = document.getElementById("movie-card");
-            movieCardEl.innerHTML = "";
-            await generateMovieCard(movieCardEl);
+           generate()
         });
+    document
+        .getElementById("generate-btn-1")
+        .addEventListener("click", async (e) => {
+           generate()
+        });
+
+    // document.getElementById("share").addEventListener("click", () => {
+        
+    // });
+    
 });
+
+async function generate() {
+    const catImageEl = document.getElementById("cat-image");
+    await replaceRandomCat(catImageEl);
+    const movieCardEl = document.getElementById("movie-card");
+    await generateMovieCard(movieCardEl);
+}
 
 async function replaceRandomCat(catImageEl) {
     catImageEl.src = await catApi.getRandomCatImgUrl();
@@ -45,18 +58,22 @@ async function generateMovieCard(cardEl) {
      * "Ratings":[{"Source":"Internet Movie Database","Value":"9.2/10"},{"Source":"Rotten Tomatoes","Value":"97%"},{"Source":"Metacritic","Value":"100/100"}],"Metascore":"100","imdbRating":"9.2","imdbVotes":"2,031,306","imdbID":"tt0068646","Type":"movie","DVD":"N/A","BoxOffice":"$136,381,073","Production":"N/A","Website":"N/A","Response":"True"}
      */
     const { Title, Year, Rated, Released, Runtime, Genre, Director, Writer, Actors, Plot, Language, Country, Awards, Poster, Ratings } = movieObj;
-    // createElementAndAppendToParent("div", JSON.stringify(movieObj, null, 4), "card__", cardEl);
-    const imgEl = createElementAndAppendToParent("img", null, "card__image", cardEl);
+    const imgEl = document.getElementById("movie-poster");
     imgEl.src = Poster;
-    const titleEl = createElementAndAppendToParent("h2", Title, "card__title", cardEl);
-    const descriptionEl = createElementAndAppendToParent("p", Plot, "card__description", cardEl);
-    const tags = createTags({Year, Rated, Released, Runtime, Genre, Director, Writer, Actors, Plot, Language, Country, Awards, Ratings});
-    const tagsEl = createElementAndAppendToParent("div", null, "card__tags", cardEl);
-    tags.forEach(tag => {
-        const tagEl = createElementAndAppendToParent("div", null, "card__tag", tagsEl);
-        createElementAndAppendToParent("span", tag.label + ": ", "card__tag-label", tagEl);
-        createElementAndAppendToParent("span", tag.value, "card__tag-value", tagEl);
-    })
+    const titleEl = document.getElementById("movie-title");
+    titleEl.innerText = Title;
+    const descriptionEl = document.getElementById("movie-description");
+    descriptionEl.innerText = Plot;
+    // createElementAndAppendToParent("p", Plot, null, descriptionEl);
+    const ratingEl = document.getElementById("movie-rating");
+    ratingEl.innerText = (Ratings?.[0]?.Value ?? 0);
+    // const tags = createTags({Year, Rated, Released, Runtime, Genre, Director, Writer, Actors, Language, Country, Awards, Ratings});
+    // const tagsEl = createElementAndAppendToParent("div", null, "card__tags", cardEl);
+    // tags.forEach(tag => {
+    //     const tagEl = createElementAndAppendToParent("div", null, "card__tag", tagsEl);
+    //     createElementAndAppendToParent("span", tag.label + ": ", "card__tag-label", tagEl);
+    //     createElementAndAppendToParent("span", tag.value, "card__tag-value", tagEl);
+    // })
 }
 
 async function retrieveRandomMovie() {

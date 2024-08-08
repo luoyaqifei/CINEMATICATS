@@ -9,8 +9,100 @@
     <script type="module" src="./scripts/main.js"></script>
 </head>
 <body>
-    <img id="cat-image" src="./assets/images/cat.jpg"></img>
-    <div id="movie-card"></div>
-    <button id="generate-btn">CLICK ME!</button>
+    <header class="header">
+        <section class="header__nav">
+            <div class="header__nav-text-wrapper">
+                <span class="header__nav-text">Powered by:</span>
+            </div>
+
+            <div class="header__nav-list-wrapper">
+            <ul class="header__nav-list">
+                <li class="header__nav-item">
+                    <a class="header__nav-link" href="https://www.omdbapi.com">OMDb API</a>
+                </li>
+                <li class="header__nav-item">
+                    <a class="header__nav-link" href="https://thecatapi.com">The Cat API</a>
+                </li>
+            </ul>
+            </div>
+        </section>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="hero__img">
+                <div class="hero__text">
+                    <h1 class="hero__header">Cinematicats</h1>
+                </div>
+            </div>
+        </section>
+
+        <section class="content">
+            <div class="content__header">
+                <h2 class="content__header-text">Need help deciding on a movie?</h2>
+            </div>
+            <div class="content__body">
+                <p class="content__body-text">Let Cinematicats help you with that!</p>
+            </div>
+            <div class="content__button">
+                <button class="submit-btn" id="generate-btn">Paws-itively need help now!</button>
+                </form>
+            </div>
+        </section>
+
+        <section class="cinematicats-wrap">
+            <h1> Cinematicats</h1>
+            <article id="movie-card" class="card">
+                <div class="card__imgs-wrap">
+                    <div class="card__img">
+                        <img id="cat-image" src="/assets/images/movie-kitty.jpg" alt="movie cat">
+                    </div>
+                    <div class="card__img">
+                        <img id="movie-poster" src="/assets/images/movie-kitty.jpg" alt="movie poster">
+                    </div>
+                </div>
+        
+                <div class="card__rating">
+                    <!-- Star rating goes here -->
+                    <h2>Rating</h2>
+                    <p id="movie-rating">****</p>
+                </div>
+        
+                <div class="card__title">
+                    <h2>Movie title</h2>
+                    <p id="movie-title">300</p>
+                    <!-- Movie title goes here -->
+                </div>
+        
+                <div class="card__description">
+                    <h2>Description</h2>
+                    <p id="movie-description">This is madness</p>
+                    <!-- movie description goes here -->
+                </div>
+        
+            </article>
+            <div class="btn-wrap">
+                <div class="btn-wrap__item">
+                    <a id="generate-btn-1" class="btn-wrap__item--shuffle">ANOTHER?</a>
+                </div>
+                
+                <!-- <div class="btn-wrap__item">
+                    <a id="share-btn" class="btn-wrap__item--share">SHARE</a>
+                </div> -->
+                
+            </div>
+            </section>
+    </main>
+
+    <footer class="footer">
+        <section class="footer__bar">
+            <div class="footer__bar-text">
+                ✨ Coded with love by Chelsea, Lily, and Mingxia. 🐱💕 ✨ 
+            </div>
+            <div class="footer__bar-copyright">
+                © 2024. The Purrfect Trio. All rights reserved.
+            </div>
+        </section>
+    </footer>
 </body>
 </html>
