@@ -137,10 +137,15 @@ body {
     }
 }
 
+.bold {
+    font-weight: bold;
+}
+
 /* button */
 .submit-btn {
     background-color: #a15216;
     color: white;
+    font-size: 12px;
     font-family:Verdana, Geneva, Tahoma, sans-serif;
     border-radius: 4px;
     border-style: none;
