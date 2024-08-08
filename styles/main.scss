@@ -3,6 +3,31 @@ body {
     padding: 0;
 }
 
+/* hero */
+
+.hero {
+    display: flex;
+
+    &__img {
+        background-image: url("../assets/hero.png");
+        width: 100%;
+        height: 40vh;
+        background-size: cover;
+        background-position: center -140px;
+        background-repeat: no-repeat;
+    }
+
+    &__header {
+        height: 100%;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        color: white;
+        letter-spacing: 0.5rem;
+        justify-content: center;
+        align-self: center;
+        padding-left: 2rem;
+    }
+}
+
 /* header */
 .header {
     
@@ -13,7 +38,7 @@ body {
         gap: 1rem;
         font-family: Verdana, Geneva, Tahoma, sans-serif;
         font-size: 14px;
-        background-color: forestgreen;
+        background-color: rgb(161, 82, 22);
 
         &-text-wrapper {
             font-size: 13px;
@@ -57,7 +82,7 @@ body {
         left: 0;
         width: 100%;
         height: 4%;
-        background-color: rgba(50, 182, 231, 0.362);        
+        background-color: rgb(43, 88, 14);        
 
         &-text {
             color: white;
