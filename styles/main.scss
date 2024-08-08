@@ -13,8 +13,10 @@ body {
         gap: 1rem;
         font-family: Verdana, Geneva, Tahoma, sans-serif;
         font-size: 14px;
+        background-color: forestgreen;
 
         &-text-wrapper {
+            font-size: 13px;
             align-self: center;
         }
 
@@ -27,14 +29,13 @@ body {
         }
 
         &-item {
-            padding-right: 1rem;
-            border-right: 2px solid #666;
         }
 
         &-link {
             font-family: Verdana, Geneva, Tahoma, sans-serif;
+            font-size: 12px;
             text-decoration: none;
-            color: #ee2fc8;
+            color: white;
 
             &:hover {
                 color: #CCC;
@@ -56,7 +57,7 @@ body {
         left: 0;
         width: 100%;
         height: 4%;
-        background-color: rgba(238, 47, 200, 0.665);        
+        background-color: rgba(50, 182, 231, 0.362);        
 
         &-text {
             color: white;
