@@ -83,6 +83,7 @@ body {
   background-color: rgb(161, 82, 22);
 }
 .header__nav-text-wrapper {
+  padding-top: 0.2rem;
   font-size: 13px;
   align-self: center;
 }
