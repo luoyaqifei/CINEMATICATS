@@ -23,10 +23,16 @@ body {
         background-color: rgba(238, 47, 200, 0.665);        
 
         &-text {
+            color: white;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            font-size: 14px;
             padding-left: 0.5rem;
         }
 
         &-copyright {
+            color: white;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            font-size: 11px;
             padding-right: 0.5rem;
         }
     }
