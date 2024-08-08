@@ -1,7 +1,6 @@
 import OmdbAPI from "./omdb-api.js";
 import CatApi from "./cat-api.js";
 import { CatAPIKey, OmdbAPIKey, topTitles } from "./consts.js";
-import { createElementAndAppendToParent } from "./utils.js";
 
 let catApi;
 let omdbApi;
@@ -18,12 +17,7 @@ document.addEventListener("DOMContentLoaded", async (e) => {
         .getElementById("generate-btn-1")
         .addEventListener("click", async (e) => {
            generate()
-        });
-
-    // document.getElementById("share").addEventListener("click", () => {
-        
-    // });
-    
+        });    
 });
 
 async function generate() {
@@ -64,16 +58,8 @@ async function generateMovieCard(cardEl) {
     titleEl.innerText = Title;
     const descriptionEl = document.getElementById("movie-description");
     descriptionEl.innerText = Plot;
-    // createElementAndAppendToParent("p", Plot, null, descriptionEl);
     const ratingEl = document.getElementById("movie-rating");
     ratingEl.innerText = (Ratings?.[0]?.Value ?? 0);
-    // const tags = createTags({Year, Rated, Released, Runtime, Genre, Director, Writer, Actors, Language, Country, Awards, Ratings});
-    // const tagsEl = createElementAndAppendToParent("div", null, "card__tags", cardEl);
-    // tags.forEach(tag => {
-    //     const tagEl = createElementAndAppendToParent("div", null, "card__tag", tagsEl);
-    //     createElementAndAppendToParent("span", tag.label + ": ", "card__tag-label", tagEl);
-    //     createElementAndAppendToParent("span", tag.value, "card__tag-value", tagEl);
-    // })
 }
 
 async function retrieveRandomMovie() {
@@ -81,21 +67,4 @@ async function retrieveRandomMovie() {
     const randomMovieId = topTitles[randomMovieIndex];
     const movieObj = await omdbApi.getMovieById(randomMovieId);
     return movieObj;
-}
-
-function createTags(properties) {
-    return Object.keys(properties).flatMap(key => {
-        if(key === "Ratings") {
-            return properties[key].map(({Source, Value}) => ({
-                label: Source,
-                value: Value
-            }));
-        }
-        else {
-            return {
-                label: key,
-                value: properties[key]
-            }
-        }
-    })
 }
