@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cinematic Cats</title>
     <link rel="stylesheet" href="./styles/main.css">
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script type="module" src="./scripts/main.js"></script>
 </head>
 <body>
@@ -44,57 +45,50 @@
                 <p class="content__body-text">Let <span class="bold">Cinematicats</span> help you with that!</p>
             </div>
             <div class="content__button">
-                <button class="submit-btn">I paws-itively need help now!</button>
+                <button class="submit-btn" id="generate-btn">I paws-itively need help now!</button>
                 </form>
             </div>
         </section>
 
         <section class="cinematicats-wrap">
             <h1>Cinematicats</h1>
-            <article class="card">
-        
+            <article id="movie-card" class="card">
                 <div class="card__imgs-wrap">
                     <div class="card__img">
-                        <img src="/styles/pictures/movie-kitty.jpg" alt="movie cat">
+                        <img id="cat-image" src="/assets/images/movie-kitty.jpg" alt="movie cat">
                     </div>
                     <div class="card__img">
-                        <img src="/styles/pictures/movie-kitty.jpg" alt="movie poster">
+                        <img id="movie-poster" src="/assets/images/movie-kitty.jpg" alt="movie poster">
                     </div>
-                    </div>
+                </div>
         
                 <div class="card__rating">
                     <!-- Star rating goes here -->
                     <h2>Rating</h2>
-                    <p>****</p>
+                    <p id="movie-rating">****</p>
                 </div>
         
                 <div class="card__title">
                     <h2>Movie title</h2>
-                    <p>300</p>
+                    <p id="movie-title">300</p>
                     <!-- Movie title goes here -->
-                </div>
-        
-                <div class="card__mood">
-                    <h2>Mood</h2>
-                    <p>🤯 </p>
-                    <!-- Mood goes here -->
                 </div>
         
                 <div class="card__description">
                     <h2>Description</h2>
-                    <p>This is madness</p>
+                    <p id="movie-description">This is madness</p>
                     <!-- movie description goes here -->
                 </div>
         
             </article>
             <div class="btn-wrap">
                 <div class="btn-wrap__item">
-                    <a class="btn-wrap__item--shuffle">ANOTHER?</a>
+                    <a id="generate-btn-1" class="btn-wrap__item--shuffle">ANOTHER?</a>
                 </div>
                 
-                <div class="btn-wrap__item">
-                    <a class="btn-wrap__item--share">SHARE</a>
-                </div>
+                <!-- <div class="btn-wrap__item">
+                    <a id="share-btn" class="btn-wrap__item--share">SHARE</a>
+                </div> -->
                 
             </div>
             </section>
