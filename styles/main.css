@@ -1,0 +1,45 @@
+.cinematicats-wrap {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+}
+
+.card {
+  border: 1px #000 solid;
+  padding: 2rem 4rem;
+  border-radius: 0.5rem;
+}
+
+.card__imgs-wrap {
+  display: flex;
+  flex-direction: row;
+}
+
+.card__img {
+  padding: 2rem;
+  max-height: 15rem;
+}
+
+.card__img > img {
+  max-height: 15rem;
+  border-radius: 0.5rem;
+}
+
+.btn-wrap {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  padding: 2rem;
+}
+
+.btn-wrap__item {
+  margin: 2rem 4rem;
+  background-color: #e73535;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  color: #fff;
+  font-weight: 600;
+}/*# sourceMappingURL=main.css.map */
