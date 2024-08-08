@@ -13,10 +13,20 @@
     border-radius: .5rem;
 }
 
-.card__imgs {
+.card__imgs-wrap {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+}
+
+.card__img {
+    padding: 2rem;
+    max-height: 15rem;
+}
+
+.card__img > img {
+    max-height: 15rem;
+    border-radius: .5rem;
+
 }
 
 .btn-wrap {
@@ -26,7 +36,7 @@
     padding: 2rem;
 }
 
-.btn-wrap__item .btn-wrap__item{
-    margin: 1.5rem;
+.btn-wrap__item {
+    margin: 2rem 4rem;
 }
 
